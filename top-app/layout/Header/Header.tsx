@@ -1,18 +1,11 @@
-import { LayoutProps } from "./Header.props"
-import styles from './Layout.module.css';
+import { HeaderProps } from "./Header.props"
+import styles from './Header.module.css';
 import cn from 'classNames';
 
-export const Layout = ({children}: LayoutProps): JSX.Element => {
+export const Header = ({...props}: HeaderProps): JSX.Element => {
     return (
-        <>
-            <Header />
-            <div>
-                <Sidebar />
-                <div>
-                    {children}
-                </div>
-            </div>
-            <Footer />
-        </>
+        <div {...props}>
+                Header
+        </div>
     );
 };
